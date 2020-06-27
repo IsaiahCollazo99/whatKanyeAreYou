@@ -109,6 +109,9 @@ export default {
         daenerys: 4,
         joffrey:  1
     },
+    metadata: {
+        name: "Which Game of Thrones Character Are You?"
+    },
     answers: {
         jon: new Answer("Jon Snow", "", "You are the leader of the Night's Watch."),
         cersei: new Answer("Cersei Lannister", "", "You are the queen of all Westeros"),

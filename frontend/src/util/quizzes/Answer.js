@@ -5,3 +5,5 @@ class Answer {
         this.answerText = answerText;
     }
 }
+
+export default Answer;
