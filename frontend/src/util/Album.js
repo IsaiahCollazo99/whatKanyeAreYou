@@ -6,3 +6,5 @@ class Album {
         this.spotifyLink = spotifyLink;
     }
 }
+
+export default Album;
