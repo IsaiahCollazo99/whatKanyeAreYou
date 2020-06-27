@@ -10,6 +10,12 @@ function App() {
         <Route exact path={"/"}>
           <LandingPage />
         </Route>
+
+        <Route exact path={"/quiz/:id"}>
+          <div className="quizDisplayContainer">
+            Quiz
+          </div>
+        </Route>
       </Switch>
     </div>
   );

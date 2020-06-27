@@ -3,9 +3,9 @@ import quizzes from '../util/quizzes';
 import QuizItem from './QuizItem';
 
 const LandingPage = () => {
-    const quizzesList = quizzes.map(quiz => {
+    const quizzesList = quizzes.map(( quiz, i ) => {
         return (
-            <QuizItem quiz={quiz} />
+            <QuizItem quiz={quiz} key={i} id={i}/>
         )
     })
     
