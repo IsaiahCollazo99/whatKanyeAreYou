@@ -1,24 +1,35 @@
-import React, { useState, useEffect } from 'react';
-import albums from '../util/albums';
+import React from 'react';
 
-const QuizAlbumRadio = ({ albumName }) => {
-    const [ album, setAlbum ] = useState({});
-
-    useEffect(() => {
-        setAlbum([albums[albumName]]);
-    }, [])
-
+const QuizAlbumRadio = ({ album, key }) => {
     const redirect = () => {
         window.open(album.youtubeLink);
     }
     
     return (
-        <>
+        <label id={key} className="radioGroups">
+            <p>{album.name}</p>
+            <img src={album.cover} alt={album.name} onClick={redirect} className="albumCover" />
             <label>
-                <img src={album.cover} alt={album.name} onClick={redirect}/>
-                <input type="radio" required className="albumRadio">{album.name}</input>
+                <input type="radio" required className="albumRadio" name={album.name} value={1}/>
+                1
             </label>
-        </>
+            <label>
+                <input type="radio" required className="albumRadio" name={album.name} value={2}/>
+                2
+            </label>
+            <label>
+                <input type="radio" required className="albumRadio" name={album.name} value={3}/>
+                3
+            </label>
+            <label>
+                <input type="radio" required className="albumRadio" name={album.name} value={4}/>
+                4
+            </label>
+            <label>
+                <input type="radio" required className="albumRadio" name={album.name} value={5}/>
+                5
+            </label>
+        </label>
     )
 }
 

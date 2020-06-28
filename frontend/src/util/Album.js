@@ -7,4 +7,4 @@ class Album {
     }
 }
 
-export default Album;
+module.exports = Album;

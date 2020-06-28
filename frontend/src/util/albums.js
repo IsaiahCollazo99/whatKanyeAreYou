@@ -1,6 +1,6 @@
-import Album from './Album.js';
+const Album = require("./Album");
 
-export default {
+const albums = {
     collegeDropout: new Album("College Dropout", "https://bit.ly/2YBuk9G", "https://bit.ly/2VpVyy5", "https://spoti.fi/2ZdzvM9"),
     lateRegistration: new Album("Late Registration", "https://bit.ly/3i6Eerv", "https://bit.ly/31mGQvG", "https://spoti.fi/31yQCLp"),
     graduation: new Album("Graduation", "https://bit.ly/2Vqyn6G", "https://bit.ly/3g4ujkG", "https://spoti.fi/31k3QLK"),
@@ -11,3 +11,5 @@ export default {
     ye: new Album("Ye", "https://bit.ly/2BLXry0", "https://bit.ly/2ZjahvO", "https://spoti.fi/387PqzI"),
     jesusIsKing: new Album("Jesus is King", "https://bit.ly/2NMshcV", "https://bit.ly/31nw348", "https://spoti.fi/3i9w69K")
 }
+
+module.exports = albums;

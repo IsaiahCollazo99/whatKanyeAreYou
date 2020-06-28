@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import quizzes from '../util/quizzes';
-import albums from '../util/albums';
 import QuizAlbumRadio from './QuizAlbumRadio';
+const albums = require("../util/albums");
 
 const QuizDisplay = () => {
     const [ quiz, setQuiz ] = useState({});
@@ -17,7 +17,7 @@ const QuizDisplay = () => {
         let quizRadioList = [];
         for(let key in albums) {
             const album = albums[key];
-            quizRadioList.push(<QuizAlbumRadio albumName={album.name} />)
+            quizRadioList.push(<QuizAlbumRadio album={album} key={key} />)
         }
         return quizRadioList;
     }

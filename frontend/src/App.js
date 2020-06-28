@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import LandingPage from './components/LandingPage';
+import QuizDisplay from './components/QuizDisplay';
 
 function App() {
   return (
@@ -12,9 +13,7 @@ function App() {
         </Route>
 
         <Route exact path={"/quiz/:id"}>
-          <div className="quizDisplayContainer">
-            Quiz
-          </div>
+          <QuizDisplay />
         </Route>
       </Switch>
     </div>
