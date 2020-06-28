@@ -17,7 +17,7 @@ const QuizDisplay = () => {
         let quizRadioList = [];
         for(let key in albums) {
             const album = albums[key];
-            quizRadioList.push(<QuizAlbumRadio album={album} key={key} />)
+            quizRadioList.push(<QuizAlbumRadio album={album} key={key} id={key} />)
         }
         return quizRadioList;
     }
