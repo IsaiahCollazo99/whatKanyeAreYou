@@ -1,23 +1,45 @@
 .radioGroups {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 200px 200px;
     margin: 15px 0;
+    align-items: center;
 }
 
-.radioGroups header {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+.radioGroups p {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
     font-size: 20px;
+    text-align: center;
+}
+
+.radioGroups img {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    height: 200px;
+    width: 200px;
+}
+
+.radioGroups section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.icon {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
 }
 
 .icon:hover {
     cursor: pointer;
 }
 
-.radioGroups img {
-    height: 200px;
-    width: 200px;
+.radioInputs {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .radioGroups label {

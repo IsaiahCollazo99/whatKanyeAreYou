@@ -20,19 +20,21 @@ const QuizAlbumRadio = ({ album, id }) => {
     
     return (
         <label id={id} className="radioGroups" title={value}>
-            <header>
-                <p>{id === "mbdtf" ? "MBDTF" : album.name}</p>
-                <div>
-                    <FaYoutube size="75px" color="#c4302b" className="icon" onClick={window.open(album.youtubeLink)} />
-                    <FaSpotify size="75px" color="#1DB954" className="icon" onClick={window.open(album.spotifyLink)} />
-                </div>
-                <img src={album.cover} alt={album.name} onClick={redirect} className="albumCover" />
-            </header>
-            <QuizRadioInput name={album.name} value={1} onChange={onRadioSelect} />
-            <QuizRadioInput name={album.name} value={2} onChange={onRadioSelect} />
-            <QuizRadioInput name={album.name} value={3} onChange={onRadioSelect} />
-            <QuizRadioInput name={album.name} value={4} onChange={onRadioSelect} />
-            <QuizRadioInput name={album.name} value={5} onChange={onRadioSelect} />
+            <p>{id === "mbdtf" ? "MBDTF" : album.name}</p>
+            <img src={album.cover} alt={album.name} onClick={redirect} className="albumCover" />
+            
+            <section>
+                <FaYoutube size="75px" color="#c4302b" className="icon" onClick={window.open(album.youtubeLink)} />
+                <FaSpotify size="75px" color="#1DB954" className="icon" onClick={window.open(album.spotifyLink)} />
+            </section>
+
+            <div className="radioInputs">
+                <QuizRadioInput name={album.name} value={1} onChange={onRadioSelect} />
+                <QuizRadioInput name={album.name} value={2} onChange={onRadioSelect} />
+                <QuizRadioInput name={album.name} value={3} onChange={onRadioSelect} />
+                <QuizRadioInput name={album.name} value={4} onChange={onRadioSelect} />
+                <QuizRadioInput name={album.name} value={5} onChange={onRadioSelect} />
+            </div>
         </label>
     )
 }
